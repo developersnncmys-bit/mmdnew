@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(if \\(Test-Path \"public\\\\logo.jpeg\"\\) { \"FOUND: public\\\\logo.jpeg \\($\\(\\(Get-Item 'public\\\\logo.jpeg'\\).Length\\) bytes\\)\" } else { \"NOT FOUND: public\\\\logo.jpeg\" }; if \\(Test-Path \"app\\\\public\\\\logo.jpeg\"\\) { \"FOUND: app\\\\public\\\\logo.jpeg \\($\\(\\(Get-Item 'app\\\\public\\\\logo.jpeg'\\).Length\\) bytes\\)\" } else { \"NOT FOUND: app\\\\public\\\\logo.jpeg\" })"
+    ]
+  }
+}
