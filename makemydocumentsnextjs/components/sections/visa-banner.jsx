@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { Plane, ArrowRight, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export default function VisaBanner() {
   return (
@@ -43,39 +45,51 @@ export default function VisaBanner() {
               </p>
 
               <div className="mt-7 flex flex-wrap justify-center gap-3 md:justify-start">
-                <Button
-                  size="lg"
-                  className="bg-white text-blue-600 shadow-lg shadow-blue-900/20 hover:bg-white/95 hover:-translate-y-0.5"
+                <Link
+                  href="/tourist-visa"
+                  className={cn(
+                    buttonVariants({ size: "lg" }),
+                    "bg-white text-blue-600 shadow-lg shadow-blue-900/20 hover:bg-white/95 hover:-translate-y-0.5"
+                  )}
                 >
                   Click Here <ArrowRight className="h-4 w-4" />
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                </Link>
+                <Link
+                  href="/tourist-visa"
+                  className={cn(
+                    buttonVariants({ variant: "outline", size: "lg" }),
+                    "border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                  )}
                 >
                   See Eligible Countries
-                </Button>
+                </Link>
               </div>
             </div>
 
             <div className="relative hidden md:block">
               <div className="absolute inset-0 rounded-3xl bg-white/10 backdrop-blur-sm" />
-              <div className="relative grid grid-cols-2 gap-3 p-5">
+              <div className="relative flex items-center justify-center p-4">
+                <img
+                  src="/illustrations/visa-passport.svg"
+                  alt="Passport with visa stamp and boarding pass"
+                  className="h-auto w-full max-w-sm select-none drop-shadow-2xl animate-float"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="relative grid grid-cols-2 gap-2 px-3 pb-4">
                 {[
                   { label: "Tourist", value: "180+ countries" },
-                  { label: "Business", value: "Multi-entry" },
-                  { label: "Student", value: "Long-stay" },
                   { label: "Avg. TAT", value: "5–7 days" },
                 ].map((c) => (
                   <div
                     key={c.label}
-                    className="rounded-2xl bg-white/15 p-4 backdrop-blur-sm"
+                    className="rounded-xl bg-white/15 px-3 py-2 backdrop-blur-sm"
                   >
-                    <div className="text-xs font-medium uppercase tracking-wider text-white/70">
+                    <div className="text-[10px] font-medium uppercase tracking-wider text-white/70">
                       {c.label}
                     </div>
-                    <div className="mt-1 font-display text-base font-bold text-white">
+                    <div className="font-display text-sm font-bold text-white">
                       {c.value}
                     </div>
                   </div>

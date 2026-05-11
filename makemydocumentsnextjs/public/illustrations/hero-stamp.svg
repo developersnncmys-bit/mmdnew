@@ -1,0 +1,23 @@
+<svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="stampG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10b981"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+    <path id="curveTop" d="M 70 70 m -50 0 a 50 50 0 1 1 100 0" />
+    <path id="curveBot" d="M 70 70 m -50 0 a 50 50 0 1 0 100 0" />
+  </defs>
+  <g transform="rotate(-10 70 70)">
+    <circle cx="70" cy="70" r="60" fill="url(#stampG)" opacity=".95"/>
+    <circle cx="70" cy="70" r="60" fill="none" stroke="#fff" stroke-opacity=".4" stroke-width="1"/>
+    <circle cx="70" cy="70" r="52" fill="none" stroke="#fff" stroke-width="2"/>
+    <circle cx="70" cy="70" r="44" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1" stroke-dasharray="2 4"/>
+    <text font-family="Arial, sans-serif" font-size="9" font-weight="800" fill="#fff" letter-spacing="2">
+      <textPath href="#curveTop" startOffset="50%" text-anchor="middle">100% VERIFIED</textPath>
+    </text>
+    <text font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="#fff" letter-spacing="1.5" opacity=".85">
+      <textPath href="#curveBot" startOffset="50%" text-anchor="middle">GOVT APPROVED</textPath>
+    </text>
+    <path d="M58 72l8 8 18-20" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <g opacity=".5">
+    <!-- Document silhouettes -->
+    <g transform="rotate(-15 80 100)" opacity=".25">
+      <rect x="60" y="60" width="40" height="56" rx="4" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+      <path d="M68 76h24M68 84h24M68 92h16" stroke="#3b82f6" stroke-width="1"/>
+    </g>
+    <g transform="rotate(20 500 120)" opacity=".22">
+      <rect x="480" y="100" width="40" height="56" rx="4" fill="none" stroke="#a78bfa" stroke-width="1.5"/>
+      <path d="M488 116h24M488 124h24M488 132h16" stroke="#a78bfa" stroke-width="1"/>
+    </g>
+    <g transform="rotate(-25 100 480)" opacity=".22">
+      <rect x="80" y="460" width="40" height="56" rx="4" fill="none" stroke="#10b981" stroke-width="1.5"/>
+      <path d="M88 476h24M88 484h24M88 492h16" stroke="#10b981" stroke-width="1"/>
+    </g>
+    <g transform="rotate(15 480 480)" opacity=".22">
+      <rect x="460" y="460" width="40" height="56" rx="4" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+      <path d="M468 476h24M468 484h24M468 492h16" stroke="#f59e0b" stroke-width="1"/>
+    </g>
+    <!-- Sparkles -->
+    <path d="M200 80l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#fbbf24" opacity=".5"/>
+    <path d="M420 220l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#a78bfa" opacity=".5"/>
+    <path d="M180 420l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#3b82f6" opacity=".5"/>
+    <!-- Dots -->
+    <circle cx="50" cy="280" r="4" fill="#3b82f6" opacity=".3"/>
+    <circle cx="540" cy="320" r="4" fill="#a78bfa" opacity=".3"/>
+    <circle cx="320" cy="50" r="4" fill="#10b981" opacity=".3"/>
+    <circle cx="280" cy="540" r="4" fill="#fbbf24" opacity=".3"/>
+  </g>
+</svg>

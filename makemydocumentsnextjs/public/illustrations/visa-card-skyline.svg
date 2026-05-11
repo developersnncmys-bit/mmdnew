@@ -1,0 +1,82 @@
+<svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".15"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Sun/moon -->
+  <circle cx="40" cy="38" r="14" fill="#fff" opacity=".3"/>
+  <!-- Background buildings (far) -->
+  <g fill="#fff" opacity=".22">
+    <rect x="0" y="80" width="14" height="60"/>
+    <rect x="16" y="70" width="10" height="70"/>
+    <rect x="28" y="86" width="12" height="54"/>
+    <path d="M44 80 L52 60 L60 80 L60 140 L44 140 Z"/>
+    <rect x="62" y="74" width="14" height="66"/>
+    <rect x="78" y="82" width="10" height="58"/>
+    <rect x="90" y="68" width="16" height="72"/>
+    <rect x="108" y="78" width="12" height="62"/>
+    <path d="M122 86 L130 70 L138 86 L138 140 L122 140 Z"/>
+    <rect x="140" y="78" width="14" height="62"/>
+    <rect x="156" y="84" width="10" height="56"/>
+    <rect x="168" y="74" width="14" height="66"/>
+    <rect x="184" y="82" width="16" height="58"/>
+  </g>
+  <!-- Foreground buildings -->
+  <g fill="#fff" opacity=".4">
+    <rect x="6" y="100" width="20" height="40"/>
+    <rect x="28" y="92" width="16" height="48"/>
+    <path d="M46 100 L54 84 L62 100 L62 140 L46 140 Z"/>
+    <rect x="64" y="96" width="22" height="44"/>
+    <rect x="88" y="84" width="14" height="56"/>
+    <path d="M104 92 L112 76 L120 92 L120 140 L104 140 Z"/>
+    <rect x="122" y="98" width="18" height="42"/>
+    <rect x="142" y="92" width="16" height="48"/>
+    <rect x="160" y="100" width="20" height="40"/>
+    <rect x="182" y="94" width="14" height="46"/>
+  </g>
+  <!-- Windows (small dots) -->
+  <g fill="#0ea5e9" opacity=".4">
+    <rect x="10" y="108" width="2" height="2"/>
+    <rect x="14" y="108" width="2" height="2"/>
+    <rect x="18" y="108" width="2" height="2"/>
+    <rect x="10" y="116" width="2" height="2"/>
+    <rect x="14" y="116" width="2" height="2"/>
+    <rect x="18" y="116" width="2" height="2"/>
+    <rect x="32" y="100" width="2" height="2"/>
+    <rect x="36" y="100" width="2" height="2"/>
+    <rect x="32" y="108" width="2" height="2"/>
+    <rect x="36" y="108" width="2" height="2"/>
+    <rect x="68" y="104" width="2" height="2"/>
+    <rect x="72" y="104" width="2" height="2"/>
+    <rect x="76" y="104" width="2" height="2"/>
+    <rect x="80" y="104" width="2" height="2"/>
+    <rect x="68" y="112" width="2" height="2"/>
+    <rect x="72" y="112" width="2" height="2"/>
+    <rect x="76" y="112" width="2" height="2"/>
+    <rect x="80" y="112" width="2" height="2"/>
+    <rect x="92" y="92" width="2" height="2"/>
+    <rect x="96" y="92" width="2" height="2"/>
+    <rect x="92" y="100" width="2" height="2"/>
+    <rect x="96" y="100" width="2" height="2"/>
+    <rect x="92" y="108" width="2" height="2"/>
+    <rect x="96" y="108" width="2" height="2"/>
+    <rect x="146" y="100" width="2" height="2"/>
+    <rect x="150" y="100" width="2" height="2"/>
+    <rect x="146" y="108" width="2" height="2"/>
+    <rect x="150" y="108" width="2" height="2"/>
+    <rect x="164" y="108" width="2" height="2"/>
+    <rect x="168" y="108" width="2" height="2"/>
+    <rect x="172" y="108" width="2" height="2"/>
+  </g>
+  <!-- Reflection at bottom (water) -->
+  <rect x="0" y="130" width="200" height="10" fill="#fff" opacity=".15"/>
+  <!-- Subtle world map watermark -->
+  <g fill="#fff" opacity=".08">
+    <circle cx="100" cy="70" r="50" stroke="#fff" stroke-width="1" fill="none"/>
+    <ellipse cx="100" cy="70" rx="50" ry="20" stroke="#fff" stroke-width="0.5" fill="none"/>
+    <line x1="50" y1="70" x2="150" y2="70" stroke="#fff" stroke-width="0.5"/>
+    <line x1="100" y1="20" x2="100" y2="120" stroke="#fff" stroke-width="0.5"/>
+  </g>
+</svg>

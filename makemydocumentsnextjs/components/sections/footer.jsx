@@ -7,7 +7,6 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
-import logo from "app/public/logo.jpeg";
 
 const footerLinks = {
   "About Company": [
@@ -51,7 +50,7 @@ export default function Footer() {
               aria-label="Make My Documents — Home"
             >
               <Image
-                src={logo}
+                src="/logo.jpeg"
                 alt="Make My Documents"
                 width={240}
                 height={70}

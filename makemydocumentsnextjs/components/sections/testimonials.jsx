@@ -1,91 +1,141 @@
 import { Star, Quote } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import ScrollReveal from "@/components/ui/scroll-reveal";
 
-const testimonials = [
+const reviews = [
   {
-    name: "Priya Sharma",
-    role: "Tenant · Pune",
-    avatar: "PS",
-    rating: 5,
-    text: "Got my rental agreement drafted in under 4 hours, complete with the right stamp duty clauses. Saved me a trip to the lawyer and three days of back-and-forth.",
+    initial: "R",
+    name: "Ravi Kumar",
+    service: "Passport Service",
+    text: "They were incredibly quick in booking my passport slot and helped me through every step. My passport arrived within 2 weeks — absolutely brilliant service.",
+    accent: "from-blue-500 to-indigo-600",
+    bg: "bg-blue-600",
   },
   {
-    name: "Rahul Mehta",
-    role: "Founder · Bangalore",
-    avatar: "RM",
-    rating: 5,
-    text: "We used Make My Documents for our founders' agreement and NDA templates. Clean drafting, fast revisions, and the consultant actually understood our cap-table.",
+    initial: "P",
+    name: "Priya Nair",
+    service: "Passport Renewal",
+    text: "Very grateful to the team who resolved my passport issue with simple, clear steps. Received my passport well within the promised timeframe. Highly recommend.",
+    accent: "from-amber-500 to-orange-600",
+    bg: "bg-amber-500",
   },
   {
-    name: "Aisha Khan",
-    role: "Freelancer · Delhi",
-    avatar: "AK",
-    rating: 5,
-    text: "I needed an affidavit and a name-change declaration urgently. The form was simple, the draft was perfect, and pricing was clear from the first click.",
+    initial: "A",
+    name: "Anil Sharma",
+    service: "PAN Card",
+    text: "Efficient, professional and friendly staff who guided me patiently through the entire process. Highly recommend for PAN card and any other document services.",
+    accent: "from-emerald-500 to-teal-600",
+    bg: "bg-emerald-500",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 md:py-28">
-      <div className="container">
-        <ScrollReveal animation="fade-up" className="mx-auto max-w-2xl text-center">
-          <Badge>Testimonials</Badge>
-          <h2 className="mt-4 font-display text-3xl font-bold md:text-4xl lg:text-5xl">
-            Loved by Clients <span className="gradient-text">Worldwide</span>
-          </h2>
-          <p className="mt-4 text-muted-foreground">
-            Don't just take our word for it — here's what our clients have to
-            say about us.
-          </p>
-        </ScrollReveal>
+    <section
+      id="reviews"
+      className="relative overflow-hidden bg-gradient-to-b from-slate-50/60 via-white to-white px-[6%] py-24"
+    >
+      <div className="pointer-events-none absolute -left-32 top-1/4 h-80 w-80 rounded-full bg-amber-100/50 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 bottom-1/4 h-80 w-80 rounded-full bg-blue-100/50 blur-3xl" />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {testimonials.map((t, i) => (
-            <ScrollReveal
-              key={t.name}
-              animation={
-                i === 0 ? "slide-left" : i === 2 ? "slide-right" : "fade-up"
-              }
-              delay={i * 120}
+      <div className="relative mx-auto max-w-[1240px]">
+        <div className="mb-14 grid grid-cols-1 items-end gap-6 lg:grid-cols-[1fr_auto]">
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-blue-700">
+              <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
+              Client Reviews
+            </div>
+            <h2 className="mt-4 font-display text-[clamp(28px,3.4vw,46px)] font-extrabold leading-[1.05] tracking-[-1px] text-slate-900">
+              What Our{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10 text-blue-600">Customers Say</span>
+                <span className="absolute inset-x-0 bottom-1 -z-0 h-2 -skew-x-6 bg-amber-200/80" />
+              </span>
+            </h2>
+            <p className="mt-4 max-w-xl text-[15px] leading-[1.7] text-slate-500">
+              Verified reviews from real customers on our Google Business profile.
+            </p>
+          </div>
+
+          {/* Aggregate rating card */}
+          <div className="inline-flex items-center gap-4 rounded-2xl border border-slate-200 bg-white px-5 py-3.5 shadow-sm">
+            <div>
+              <div className="flex gap-0.5 text-amber-400">
+                {[0, 1, 2, 3, 4].map((i) => (
+                  <Star key={i} className="h-4 w-4 fill-current" />
+                ))}
+              </div>
+              <div className="mt-0.5 text-[10.5px] font-bold uppercase tracking-wider text-slate-400">
+                Google Verified
+              </div>
+            </div>
+            <div className="h-9 w-px bg-slate-200" />
+            <div>
+              <div className="font-display text-[24px] font-extrabold leading-none tracking-[-0.5px] text-slate-900">
+                4.8
+              </div>
+              <div className="mt-1 text-[10.5px] font-medium text-slate-500">
+                1L+ reviews
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {reviews.map((r, idx) => (
+            <div
+              key={r.name}
+              className="group relative"
+              style={{ marginTop: idx === 1 ? "0" : idx === 0 ? "0px" : "0px" }}
             >
-              <div className="group relative h-full overflow-hidden rounded-2xl border bg-card p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10">
-                <div
-                  className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 blur-2xl transition-opacity duration-500 group-hover:opacity-100 opacity-0"
-                  aria-hidden
-                />
-                <Quote className="absolute right-6 top-6 h-8 w-8 text-primary/10 transition-all duration-500 group-hover:scale-125 group-hover:text-primary/30" />
+              {/* Backplate */}
+              <div
+                className={`absolute inset-0 translate-x-2 translate-y-2 rounded-3xl bg-gradient-to-br ${r.accent} opacity-15 transition-all group-hover:translate-x-3 group-hover:translate-y-3 group-hover:opacity-25`}
+              />
 
-                <div className="relative flex gap-0.5 text-yellow-500">
-                  {Array.from({ length: t.rating }).map((_, idx) => (
-                    <Star
-                      key={idx}
-                      className="h-4 w-4 fill-current transition-transform group-hover:scale-110"
-                      style={{ transitionDelay: `${idx * 40}ms` }}
-                    />
-                  ))}
+              <div className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-7 shadow-[0_10px_30px_-15px_rgba(15,23,42,0.18)] transition-all hover:-translate-y-1 hover:shadow-[0_22px_48px_-18px_rgba(15,23,42,0.25)]">
+                {/* Decorative quote */}
+                <Quote
+                  className="pointer-events-none absolute -top-2 right-4 h-24 w-24 text-slate-100"
+                  strokeWidth={1.5}
+                  aria-hidden="true"
+                />
+
+                <div className="relative flex items-center justify-between">
+                  <div className="flex gap-0.5 text-amber-400">
+                    {[0, 1, 2, 3, 4].map((i) => (
+                      <Star key={i} className="h-3.5 w-3.5 fill-current" />
+                    ))}
+                  </div>
+                  <span className="inline-flex items-center gap-1 rounded-full border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[9.5px] font-bold uppercase tracking-[0.12em] text-emerald-700">
+                    <span className="h-1 w-1 rounded-full bg-emerald-500" />
+                    Verified
+                  </span>
                 </div>
 
-                <p className="relative mt-4 text-sm leading-relaxed text-muted-foreground">
-                  "{t.text}"
+                <p className="relative mt-5 flex-1 text-[14.5px] leading-[1.75] text-slate-700">
+                  "{r.text}"
                 </p>
 
-                <div className="relative mt-6 flex items-center gap-3 border-t pt-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full gradient-bg font-display text-sm font-bold text-white shadow-md transition-transform group-hover:scale-110">
-                    {t.avatar}
+                {/* Divider */}
+                <div className="relative mt-6 flex items-center gap-3 border-t border-dashed border-slate-200 pt-5">
+                  <div
+                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full ${r.bg} font-display text-[16px] font-bold text-white shadow-md ring-4 ring-white`}
+                  >
+                    {r.initial}
                   </div>
-                  <div>
-                    <div className="font-display text-sm font-semibold">
-                      {t.name}
+                  <div className="min-w-0 flex-1">
+                    <div className="font-display text-[14px] font-bold text-slate-900">
+                      {r.name}
                     </div>
-                    <div className="text-xs text-muted-foreground">
-                      {t.role}
+                    <div className="mt-0.5 text-[12px] font-medium text-blue-600">
+                      {r.service}
                     </div>
                   </div>
+                  <span className="inline-flex h-7 items-center gap-1 rounded-md bg-slate-50 px-2 text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                    Google
+                  </span>
                 </div>
               </div>
-            </ScrollReveal>
+            </div>
           ))}
         </div>
       </div>

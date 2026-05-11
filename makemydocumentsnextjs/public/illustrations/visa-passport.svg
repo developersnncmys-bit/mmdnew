@@ -1,0 +1,75 @@
+<svg viewBox="0 0 360 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="passport" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#1e40af"/>
+    </linearGradient>
+    <filter id="vshadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8"/>
+      <feOffset dy="6"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.25"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- World map dots backdrop -->
+  <g fill="#fff" opacity=".18">
+    <circle cx="40" cy="40" r="2"/><circle cx="60" cy="55" r="2"/><circle cx="80" cy="40" r="2"/>
+    <circle cx="100" cy="60" r="2"/><circle cx="120" cy="50" r="2"/><circle cx="140" cy="65" r="2"/>
+    <circle cx="160" cy="55" r="2"/><circle cx="180" cy="70" r="2"/><circle cx="200" cy="60" r="2"/>
+    <circle cx="220" cy="80" r="2"/><circle cx="240" cy="70" r="2"/><circle cx="260" cy="85" r="2"/>
+    <circle cx="280" cy="75" r="2"/><circle cx="300" cy="90" r="2"/><circle cx="320" cy="80" r="2"/>
+    <circle cx="50" cy="100" r="2"/><circle cx="70" cy="115" r="2"/><circle cx="90" cy="100" r="2"/>
+    <circle cx="290" cy="200" r="2"/><circle cx="310" cy="215" r="2"/><circle cx="330" cy="200" r="2"/>
+    <circle cx="40" cy="240" r="2"/><circle cx="60" cy="255" r="2"/><circle cx="80" cy="240" r="2"/>
+    <circle cx="100" cy="260" r="2"/><circle cx="270" cy="260" r="2"/><circle cx="290" cy="275" r="2"/>
+    <circle cx="310" cy="260" r="2"/>
+  </g>
+
+  <!-- Dotted travel arc -->
+  <path d="M50 250 Q180 80 320 220" stroke="#fff" stroke-width="2" stroke-dasharray="4 6" fill="none" opacity=".55"/>
+
+  <!-- Globe icon (background, faint) -->
+  <g opacity=".12">
+    <circle cx="180" cy="160" r="120" fill="#fff"/>
+  </g>
+
+  <!-- Passport book -->
+  <g filter="url(#vshadow)" transform="rotate(-8 180 170)">
+    <rect x="100" y="80" width="160" height="200" rx="8" fill="url(#passport)"/>
+    <rect x="100" y="80" width="160" height="200" rx="8" fill="none" stroke="#fff" stroke-opacity=".15"/>
+    <!-- Emblem -->
+    <text x="180" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#fbbf24" letter-spacing="2">PASSPORT</text>
+    <circle cx="180" cy="190" r="36" fill="none" stroke="#fbbf24" stroke-width="2.5"/>
+    <circle cx="180" cy="190" r="28" fill="none" stroke="#fbbf24" stroke-width="1" opacity=".7"/>
+    <path d="M154 190h52M180 164v52" stroke="#fbbf24" stroke-width="1.5"/>
+    <path d="M158 178c8 6 36 6 44 0M158 202c8-6 36-6 44 0M168 167c4 16 4 30 0 46M192 167c4 16 4 30 0 46" stroke="#fbbf24" stroke-width="1" fill="none" opacity=".7"/>
+    <text x="180" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#fbbf24" letter-spacing="2">REPUBLIC</text>
+  </g>
+
+  <!-- Visa stamp -->
+  <g transform="rotate(15 290 110)">
+    <circle cx="290" cy="110" r="34" fill="none" stroke="#dc2626" stroke-width="3" opacity=".9"/>
+    <circle cx="290" cy="110" r="28" fill="none" stroke="#dc2626" stroke-width="1.5" opacity=".7"/>
+    <text x="290" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="800" fill="#dc2626">VISA</text>
+    <text x="290" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" font-weight="600" fill="#dc2626">APPROVED</text>
+    <path d="M278 124h24" stroke="#dc2626" stroke-width="1.2"/>
+  </g>
+
+  <!-- Plane -->
+  <g transform="rotate(-25 80 90)">
+    <path d="M50 90l40-12-6-10 8-2 14 14 18-4 4 6-18 8 4 14-6 4-12-12-30 8z" fill="#fff"/>
+    <path d="M50 90l40-12-6-10 8-2 14 14 18-4 4 6-18 8 4 14-6 4-12-12-30 8z" stroke="#fff" stroke-opacity=".4"/>
+  </g>
+
+  <!-- Boarding pass corner -->
+  <g filter="url(#vshadow)" transform="rotate(8 70 240)">
+    <rect x="20" y="200" width="100" height="60" rx="6" fill="#fff"/>
+    <rect x="20" y="200" width="100" height="14" rx="6" fill="#3b82f6"/>
+    <text x="28" y="211" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#fff" letter-spacing="1.5">BOARDING PASS</text>
+    <text x="28" y="232" font-family="Arial, sans-serif" font-size="14" font-weight="800" fill="#1e3a8a">DEL → JFK</text>
+    <rect x="28" y="240" width="50" height="3" rx="1.5" fill="#cbd5e1"/>
+    <rect x="28" y="247" width="40" height="3" rx="1.5" fill="#e2e8f0"/>
+    <rect x="92" y="220" width="20" height="32" rx="2" fill="none" stroke="#cbd5e1" stroke-dasharray="2 2"/>
+  </g>
+</svg>

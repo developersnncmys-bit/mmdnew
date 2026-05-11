@@ -1,116 +1,144 @@
-import { Search, Headphones, PackageCheck } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import ScrollReveal from "@/components/ui/scroll-reveal";
+import { MessageSquare, FileText, Cog, PackageCheck, ArrowRight } from "lucide-react";
 
 const steps = [
   {
-    icon: Search,
-    step: "01",
-    title: "Search & Select",
-    description:
-      "Search and select which document you want to get ready — pick from 200+ document types.",
+    num: "01",
+    icon: MessageSquare,
+    title: "Tell Us What You Need",
+    desc: "Call, WhatsApp or fill our form. We advise the best approach for your document instantly.",
+    img: "/illustrations/process-search.svg",
+    accent: "from-blue-500 to-indigo-600",
+    chip: "bg-blue-50 text-blue-700 border-blue-200",
   },
   {
-    icon: Headphones,
-    step: "02",
-    title: "End-to-End Assistance",
-    description:
-      "Get end-to-end assistance and complete guidance from our experts to get your document ready.",
+    num: "02",
+    icon: FileText,
+    title: "Submit Documents",
+    desc: "We tell you exactly what's required. Upload digitally or visit our Bangalore office.",
+    img: "/illustrations/process-assist.svg",
+    accent: "from-emerald-500 to-teal-600",
+    chip: "bg-emerald-50 text-emerald-700 border-emerald-200",
   },
   {
+    num: "03",
+    icon: Cog,
+    title: "We Process Everything",
+    desc: "Our team handles applications, follows up with authorities and keeps you updated at every stage.",
+    img: "/illustrations/hero-stamp.svg",
+    accent: "from-amber-500 to-orange-600",
+    chip: "bg-amber-50 text-amber-700 border-amber-200",
+  },
+  {
+    num: "04",
     icon: PackageCheck,
-    step: "03",
-    title: "Delivered to Your Doorstep",
-    description:
-      "Your document gets ready and delivered to your doorstep — sit back and relax.",
+    title: "Delivered to Your Door",
+    desc: "Sit back. Your completed document reaches your doorstep. No extra trips needed.",
+    img: "/illustrations/process-deliver.svg",
+    accent: "from-rose-500 to-pink-600",
+    chip: "bg-rose-50 text-rose-700 border-rose-200",
   },
 ];
 
 export default function Process() {
   return (
-    <section id="process" className="relative overflow-hidden py-20 md:py-28">
+    <section id="how-it-works" className="relative overflow-hidden bg-slate-950 px-[6%] py-24">
+      {/* Background pattern */}
       <div
-        className="absolute -left-32 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-amber-300/20 blur-3xl"
-        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.06]"
+        aria-hidden="true"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
+        }}
       />
+      <div className="pointer-events-none absolute -top-40 left-1/2 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-blue-600/20 blur-3xl" />
 
-      <div className="container relative">
-        <ScrollReveal animation="fade-up" className="mx-auto max-w-3xl text-center">
-          <Badge>How It Works</Badge>
-          <h2 className="mt-4 font-display text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
-            Make My Documents is{" "}
-            <span className="gradient-text">
-              the smartest way to get your documents
-            </span>{" "}
-            done.
+      <div className="relative mx-auto max-w-[1240px]">
+        <div className="mx-auto mb-16 max-w-2xl text-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-blue-300 backdrop-blur">
+            <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
+            Simple Process
+          </div>
+          <h2 className="mt-4 font-display text-[clamp(28px,3vw,46px)] font-extrabold leading-[1.05] tracking-[-1px] text-white">
+            Done in <span className="text-blue-400">4 Steps</span>
           </h2>
-          <p className="mt-4 text-muted-foreground">
-            Three simple steps. Zero paperwork stress. Real human guidance from
-            start to finish.
+          <p className="mx-auto mt-4 max-w-[540px] text-[15.5px] leading-[1.7] text-white/55">
+            No queues. No stress. A clear, guided path from your first message
+            to document in hand.
           </p>
-        </ScrollReveal>
+        </div>
 
-        <div className="relative mt-20">
+        {/* Connecting dashed path on lg */}
+        <div className="relative grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           <svg
-            className="absolute left-0 right-0 top-12 hidden h-24 w-full lg:block"
-            viewBox="0 0 1200 100"
-            fill="none"
+            aria-hidden="true"
+            className="pointer-events-none absolute left-[12.5%] right-[12.5%] top-[110px] hidden h-2 w-3/4 lg:block"
+            viewBox="0 0 800 8"
             preserveAspectRatio="none"
-            aria-hidden
           >
-            <path
-              d="M 100 50 Q 350 -10 600 50 T 1100 50"
-              stroke="url(#processGradient)"
+            <line
+              x1="0"
+              y1="4"
+              x2="800"
+              y2="4"
+              stroke="rgba(96,165,250,0.4)"
               strokeWidth="2"
               strokeDasharray="6 8"
-              fill="none"
             />
-            <defs>
-              <linearGradient
-                id="processGradient"
-                x1="0"
-                y1="0"
-                x2="1200"
-                y2="0"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.2" />
-                <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.6" />
-                <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.2" />
-              </linearGradient>
-            </defs>
           </svg>
 
-          <div className="relative grid gap-10 md:gap-8 lg:grid-cols-3">
-            {steps.map((s, i) => (
-              <ScrollReveal
-                key={s.step}
-                animation="fade-up"
-                delay={i * 150}
-                className="group relative flex flex-col items-center text-center"
-              >
-                <div className="relative">
-                  <div className="absolute inset-0 rounded-full gradient-bg opacity-20 blur-2xl transition-opacity group-hover:opacity-50" />
-                  <div className="relative flex h-28 w-28 items-center justify-center rounded-full gradient-bg shadow-xl shadow-primary/20 transition-all duration-500 group-hover:scale-110 group-hover:shadow-primary/40">
-                    <s.icon
-                      className="h-12 w-12 text-white transition-transform duration-500 group-hover:scale-110"
-                      strokeWidth={1.75}
-                    />
-                  </div>
-                  <div className="absolute -right-1 -top-1 flex h-9 w-9 items-center justify-center rounded-full border-2 border-background bg-card font-display text-sm font-bold text-primary shadow-md transition-transform group-hover:scale-110">
-                    {s.step}
-                  </div>
+          {steps.map((s, idx) => (
+            <div
+              key={s.num}
+              className="group relative"
+              style={{ marginTop: idx % 2 === 0 ? "0" : "32px" }}
+            >
+              {/* Step card */}
+              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-white/20 hover:bg-white/[0.07]">
+                {/* Number badge */}
+                <div
+                  className={`absolute -right-3 -top-3 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${s.accent} font-display text-[20px] font-extrabold text-white shadow-[0_12px_30px_-8px_rgba(0,0,0,0.6)]`}
+                >
+                  {s.num}
                 </div>
 
-                <h3 className="mt-7 font-display text-xl font-bold md:text-2xl">
+                {/* Image */}
+                <div className="relative h-32 w-full overflow-hidden rounded-2xl bg-white/[0.03] ring-1 ring-white/[0.06]">
+                  <img
+                    src={s.img}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                {/* Icon chip */}
+                <div
+                  className={`mt-5 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider ${s.chip}`}
+                >
+                  <s.icon className="h-3 w-3" strokeWidth={2.25} />
+                  Step {s.num}
+                </div>
+
+                <h3 className="mt-3 font-display text-[16px] font-bold leading-[1.25] text-white">
                   {s.title}
                 </h3>
-                <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground md:text-base">
-                  {s.description}
+                <p className="mt-2 text-[13px] leading-[1.65] text-white/55">
+                  {s.desc}
                 </p>
-              </ScrollReveal>
-            ))}
-          </div>
+
+                {idx < steps.length - 1 && (
+                  <div className="mt-4 hidden items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-blue-300/70 lg:flex">
+                    Next
+                    <ArrowRight className="h-3 w-3" />
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

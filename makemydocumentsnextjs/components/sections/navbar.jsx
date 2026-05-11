@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logo from "app/public/logo.jpeg";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -41,15 +40,15 @@ export default function Navbar() {
         scrolled ? "glass shadow-sm backdrop-blur-xl" : "bg-transparent"
       )}
     >
-      <nav className="container flex h-16 items-center justify-between md:h-20">
+      <nav className="container flex h-14 items-center justify-between md:h-16">
         <Link href="/" className="flex items-center" aria-label="Make My Documents — Home">
           <Image
-            src={logo}
+            src="/logo.jpeg"
             alt="Make My Documents"
             width={280}
             height={80}
             priority
-            className="h-12 w-auto md:h-16"
+            className="h-9 w-auto md:h-11"
           />
         </Link>
 

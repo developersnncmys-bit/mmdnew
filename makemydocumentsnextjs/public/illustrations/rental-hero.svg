@@ -1,0 +1,149 @@
+<svg viewBox="0 0 480 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="rh-doc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="rh-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="rh-house" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbbf24"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="rh-roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dc2626"/>
+      <stop offset="1" stop-color="#991b1b"/>
+    </linearGradient>
+    <linearGradient id="rh-key" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbbf24"/>
+      <stop offset="1" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="rh-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+      <feOffset dy="4"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".22"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background blob -->
+  <circle cx="240" cy="200" r="170" fill="#dbeafe" opacity=".5"/>
+  <circle cx="360" cy="120" r="60" fill="#ede9fe" opacity=".7"/>
+
+  <!-- House behind -->
+  <g filter="url(#rh-shadow)" transform="translate(290 90)">
+    <path d="M0 60 L60 0 L120 60 L120 130 a4 4 0 0 1 -4 4 H4 a4 4 0 0 1 -4-4 Z" fill="url(#rh-house)"/>
+    <path d="M-12 64 L60 -8 L132 64" stroke="url(#rh-roof)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <rect x="48" y="68" width="24" height="42" rx="2" fill="#7c2d12"/>
+    <circle cx="66" cy="90" r="2" fill="#fbbf24"/>
+    <rect x="14" y="74" width="22" height="22" rx="2" fill="#dbeafe"/>
+    <path d="M14 85h22M25 74v22" stroke="#fff" stroke-width="1"/>
+    <rect x="84" y="74" width="22" height="22" rx="2" fill="#dbeafe"/>
+    <path d="M84 85h22M95 74v22" stroke="#fff" stroke-width="1"/>
+    <rect x="50" y="14" width="20" height="14" rx="1" fill="#7c2d12"/>
+    <rect x="54" y="-4" width="6" height="20" rx="1" fill="#7c2d12"/>
+  </g>
+
+  <!-- Main document (rental agreement) -->
+  <g filter="url(#rh-shadow)" transform="rotate(-4 200 220)">
+    <rect x="60" y="80" width="220" height="280" rx="12" fill="url(#rh-doc)"/>
+    <rect x="60" y="80" width="220" height="50" rx="12" fill="url(#rh-header)"/>
+    <rect x="60" y="118" width="220" height="12" fill="url(#rh-header)"/>
+
+    <!-- Header logo + title -->
+    <circle cx="86" cy="105" r="12" fill="#fff" opacity=".25"/>
+    <path d="M80 105l4 4 8-9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="106" y="103" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#fff" letter-spacing="1">RENTAL AGREEMENT</text>
+    <text x="106" y="116" font-family="Arial, sans-serif" font-size="7" font-weight="600" fill="#fff" opacity=".8" letter-spacing=".5">11-MONTH LEASE · LEGALLY VALID</text>
+
+    <!-- Owner / Tenant rows -->
+    <g transform="translate(78 152)">
+      <text font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="#94a3b8" letter-spacing=".5">OWNER</text>
+      <rect y="11" width="80" height="4" rx="2" fill="#1e293b"/>
+      <rect y="20" width="60" height="3" rx="1.5" fill="#cbd5e1"/>
+    </g>
+    <g transform="translate(180 152)">
+      <text font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="#94a3b8" letter-spacing=".5">TENANT</text>
+      <rect y="11" width="80" height="4" rx="2" fill="#1e293b"/>
+      <rect y="20" width="60" height="3" rx="1.5" fill="#cbd5e1"/>
+    </g>
+
+    <!-- Body text lines -->
+    <g transform="translate(78 192)">
+      <rect width="184" height="3" rx="1.5" fill="#e2e8f0"/>
+      <rect y="8" width="170" height="3" rx="1.5" fill="#e2e8f0"/>
+      <rect y="16" width="190" height="3" rx="1.5" fill="#e2e8f0"/>
+      <rect y="24" width="160" height="3" rx="1.5" fill="#e2e8f0"/>
+    </g>
+
+    <!-- Clause boxes -->
+    <g transform="translate(78 232)">
+      <rect width="86" height="40" rx="4" fill="#dbeafe"/>
+      <text x="8" y="14" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#3b82f6" letter-spacing=".5">RENT</text>
+      <text x="8" y="28" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#1e3a8a">₹ 25,000</text>
+      <text x="8" y="36" font-family="Arial, sans-serif" font-size="5" fill="#64748b">per month</text>
+    </g>
+    <g transform="translate(176 232)">
+      <rect width="86" height="40" rx="4" fill="#dcfce7"/>
+      <text x="8" y="14" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#16a34a" letter-spacing=".5">DEPOSIT</text>
+      <text x="8" y="28" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#14532d">₹ 50,000</text>
+      <text x="8" y="36" font-family="Arial, sans-serif" font-size="5" fill="#64748b">refundable</text>
+    </g>
+
+    <!-- Tags -->
+    <g transform="translate(78 282)" font-family="Arial, sans-serif" font-size="6" font-weight="600">
+      <rect width="44" height="14" rx="7" fill="#ede9fe"/>
+      <text x="22" y="9.5" text-anchor="middle" fill="#7c3aed">11 MONTHS</text>
+      <rect x="50" width="60" height="14" rx="7" fill="#fef3c7"/>
+      <text x="80" y="9.5" text-anchor="middle" fill="#a16207">E-STAMPED</text>
+      <rect x="116" y="0" width="56" height="14" rx="7" fill="#fce7f3"/>
+      <text x="144" y="9.5" text-anchor="middle" fill="#be185d">NOTARIZED</text>
+    </g>
+
+    <!-- Signature block -->
+    <g transform="translate(78 314)">
+      <text font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#94a3b8">SIGNATURE</text>
+      <path d="M0 18 Q14 8 26 16 T58 14 T96 18" stroke="#1e3a8a" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <rect y="28" width="100" height="2" rx="1" fill="#cbd5e1"/>
+    </g>
+    <g transform="translate(186 314)">
+      <text font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#94a3b8">DATE</text>
+      <text x="0" y="22" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#1e293b">15 MAY 2026</text>
+      <rect y="28" width="80" height="2" rx="1" fill="#cbd5e1"/>
+    </g>
+  </g>
+
+  <!-- Approved stamp -->
+  <g filter="url(#rh-shadow)" transform="rotate(-12 320 280)">
+    <circle cx="320" cy="280" r="38" fill="none" stroke="#10b981" stroke-width="3" opacity=".95"/>
+    <circle cx="320" cy="280" r="32" fill="none" stroke="#10b981" stroke-width="1.4" opacity=".7"/>
+    <text x="320" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="800" fill="#10b981">APPROVED</text>
+    <path d="M306 290l5 5 14-14" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Key with keychain -->
+  <g filter="url(#rh-shadow)" transform="translate(50 280) rotate(-25)">
+    <circle cx="20" cy="20" r="16" fill="none" stroke="url(#rh-key)" stroke-width="6"/>
+    <circle cx="20" cy="20" r="6" fill="none" stroke="url(#rh-key)" stroke-width="3"/>
+    <rect x="34" y="18" width="50" height="6" rx="1" fill="url(#rh-key)"/>
+    <rect x="76" y="14" width="4" height="14" rx="1" fill="url(#rh-key)"/>
+    <rect x="68" y="14" width="4" height="10" rx="1" fill="url(#rh-key)"/>
+  </g>
+
+  <!-- Pen -->
+  <g filter="url(#rh-shadow)" transform="translate(30 130) rotate(35)">
+    <rect x="0" y="0" width="80" height="10" rx="2" fill="#1e293b"/>
+    <rect x="0" y="0" width="80" height="3" rx="1.5" fill="#475569"/>
+    <path d="M80 0 L96 5 L80 10 Z" fill="#fbbf24"/>
+    <rect x="-6" y="2" width="6" height="6" rx="1" fill="#475569"/>
+    <circle cx="-3" cy="5" r="1.5" fill="#cbd5e1"/>
+  </g>
+
+  <!-- Sparkles -->
+  <path d="M40 60l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#fbbf24" opacity=".9"/>
+  <path d="M430 350l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#a78bfa" opacity=".8"/>
+  <circle cx="420" cy="60" r="4" fill="#10b981" opacity=".7"/>
+  <circle cx="60" cy="370" r="4" fill="#3b82f6" opacity=".6"/>
+</svg>

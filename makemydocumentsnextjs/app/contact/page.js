@@ -14,7 +14,8 @@ import {
   Instagram,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import AssociatedWith from "@/components/sections/associated-with";
 
 export const metadata = {
@@ -294,21 +295,18 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <Button
-                  size="sm"
-                  className="mt-5 bg-white text-primary shadow-md hover:bg-white/95"
-                  asChild={false}
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Dattatreya+Nagar+Hosakerehalli+BSK+3rd+Stage+Bangalore+560085"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    buttonVariants({ size: "sm" }),
+                    "mt-5 bg-white text-primary shadow-md hover:bg-white/95"
+                  )}
                 >
-                  <a
-                    href="https://www.google.com/maps/search/?api=1&query=Dattatreya+Nagar+Hosakerehalli+BSK+3rd+Stage+Bangalore+560085"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5"
-                  >
-                    Open in Google Maps
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
-                </Button>
+                  Open in Google Maps
+                  <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
 
               <div className="overflow-hidden rounded-3xl border bg-card shadow-sm">

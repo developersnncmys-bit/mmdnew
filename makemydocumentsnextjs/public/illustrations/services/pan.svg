@@ -1,0 +1,9 @@
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="6" y="14" width="52" height="36" rx="4" fill="#fff"/>
+  <rect x="6" y="14" width="52" height="10" fill="#0f172a" fill-opacity=".25"/>
+  <text x="11" y="22" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#fff" letter-spacing=".5">INCOME TAX</text>
+  <rect x="11" y="30" width="14" height="14" rx="1.5" fill="#0f172a" fill-opacity=".25"/>
+  <circle cx="18" cy="35" r="3" fill="#0f172a" fill-opacity=".55"/>
+  <path d="M13 42c1-2 3-3 5-3s4 1 5 3" stroke="#0f172a" stroke-opacity=".55" stroke-width="1.4" fill="none"/>
+  <path d="M30 32h22M30 37h18M30 42h14" stroke="#0f172a" stroke-opacity=".5" stroke-width="1.6" stroke-linecap="round"/>
+</svg>
